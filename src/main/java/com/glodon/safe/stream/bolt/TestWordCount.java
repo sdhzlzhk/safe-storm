@@ -35,6 +35,7 @@ public class TestWordCount extends BaseRichBolt {
         }
         count++;
         wordMap.put(word, count);
+        LOG.info("{} = {}", word, count);
         this.outputCollector.emit(input, new Values(word,count));
         this.outputCollector.ack(input);
     }
