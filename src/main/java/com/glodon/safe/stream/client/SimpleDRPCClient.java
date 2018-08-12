@@ -14,8 +14,8 @@ public class SimpleDRPCClient {
         conf.put(Config.STORM_NIMBUS_RETRY_TIMES, 3);
         conf.put(Config.STORM_NIMBUS_RETRY_INTERVAL, 10);
         conf.put(Config.STORM_NIMBUS_RETRY_INTERVAL_CEILING, 20);
-        DRPCClient client = new DRPCClient(conf, "192.168.1.114", 3772);
-        String result = client.execute("add", "10 5");
+        DRPCClient client = new DRPCClient(conf, "cluster03", 3772);
+        String result = client.execute("add", "100,45");
         System.out.println("结果 = " + result);
     }
 }
